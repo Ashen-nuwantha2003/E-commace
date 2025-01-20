@@ -8,40 +8,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+
         #category>div {
             width: 10%;
             aspect-ratio: 1/1;
-            margin: 1%;
+            margin: 2%;
             border-radius: 100%;
         }
 
         #category>div>div {
-            width: 100%;
+            width: 110%;
             aspect-ratio: 1/1;
-            border: 1px solid;
+            border: 1px gray;
             margin: 1%;
             border-radius: 100%;
             background-size: cover;
         }
 
         #category>div:nth-child(1)>div {
-            background-image: url("/imgs/seedless_fruits.jpg");
+            background-image: url("imgs/4.jpg");
         }
 
         #category>div:nth-child(2)>div {
-            background-image: url("/imgs/2-2-2-2foodgroups_vegetables_detailfeature.jpg");
+            background-image: url("imgs/3.jpg");
         }
 
         #category>div:nth-child(3)>div {
-            background-image: url("/imgs/meats.jpg");
+            background-image: url("imgs/meats.jpg");
         }
 
         #category>div:nth-child(4)>div {
-            background-image: url("/imgs/dairy.jpg");
+            background-image: url("imgs/1.jpg");
         }
 
         #category>div:nth-child(5)>div {
-            background-image: url("/imgs/pantry.jpg");
+            background-image: url("imgs/2.jpg");
+        }
+        #category>div:nth-child(6)>div {
+            background-image: url("imgs/73018462-SUB-CAT-IMAGE_Household.jpg");
+        }
+        #category>div:nth-child(7)>div {
+            background-image: url("imgs/52306849-SUB-CAT-IMAGES-Rice.jpg");
         }
 
         #category>div>button {
@@ -50,7 +57,29 @@
             align-items: end;
             justify-content: center;
         }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            background-color: #fff;
+        }
 
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card .btn {
+            border-color: red;
+            color: red;
+        }
+
+        .product-card .btn:hover {
+            background-color: red;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -91,12 +120,13 @@
         <div class="container">
             <nav class="nav">
                 <a class="nav-link text-danger fw-bold" href="#">Shop By Category</a>
-                <a class="nav-link" href="#">Baby Products</a>
+                <a class="nav-link" href="#">Fruits</a>
+                <a class="nav-link" href="#">Vegetables</a>
+                <a class="nav-link" href="#">Meats</a>
                 <a class="nav-link" href="#">Dairy</a>
                 <a class="nav-link" href="#">Beverages</a>
-                <a class="nav-link" href="#">Food Cupboard</a>
                 <a class="nav-link" href="#">Household</a>
-                <a class="nav-link" href="#">Tea & Coffee</a>
+                <a class="nav-link" href="#">Rice</a>
                 <span class="ms-auto text-muted">Delivery Today: 12:00 PM - 04:00 PM</span>
             </nav>
         </div>
@@ -105,10 +135,32 @@
 
 
 <main class="container my-4">
-    <section class="hero text-center py-5 bg-light">
-        <h2>Welcome to Sri Lanka's Freshest Online Grocery Store</h2>
-        <p class="lead">Shop fresh produce, meats, pantry staples, and more delivered straight to your door.</p>
-        <a href="products.jsp" class="btn btn-primary btn-lg">Shop Now</a>
+    <section>
+        <div id="welcome" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1: Special Offers -->
+                <div class="carousel-item active">
+                    <img src="imgs/DySec-1mJzh8tF3RDeals-of-the-month-jan-web.png" class="d-block w-100" alt="Special Offers">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <!-- Slide 2: Discounts -->
+                <div class="carousel-item">
+                    <img src="imgs/DySec-yVL8XjFvRdfollow-us-banner.png" class="d-block w-100" alt="Discounts">
+                    <div class="carousel-caption d-none d-md-block">
+
+                    </div>
+                </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#businessCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#businessCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
 
     <div class="container mt-5">
@@ -133,7 +185,15 @@
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="category.jsp?category=pantry" class="btn btn-outline-secondary">Pantry Staples</a>
+                    <a href="category.jsp?category=pantry" class="btn btn-outline-secondary">Beverages</a>
+                </div>
+                <div class="col-md-2">
+                    <div></div>
+                    <a href="category.jsp?category=pantry" class="btn btn-outline-secondary">Household</a>
+                </div>
+                <div class="col-md-2">
+                    <div></div>
+                    <a href="category.jsp?category=pantry" class="btn btn-outline-secondary">Rice</a>
                 </div>
             </div>
         </section>
@@ -147,8 +207,6 @@
                 <div class="carousel-item active">
                     <img src="imgs/DySec-zJn1bOYCgqUFD-BANNER-JAN-WEB.png" class="d-block w-100" alt="Special Offers">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Special Offers</h5>
-                        <p>Don't miss out on our exclusive deals!</p>
                     </div>
                 </div>
                 <!-- Slide 2: Discounts -->
@@ -156,23 +214,18 @@
                     <img src="imgs/DySec-3Se5qMCYlbVGFT_Web_Banner.png" class="d-block w-100" alt="Discounts">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Discounts</h5>
-                        <p>Save big on your favorite items!</p>
                     </div>
                 </div>
                 <!-- Slide 3: Best Selling Items -->
                 <div class="carousel-item">
                     <img src="imgs/DySec-5qgCYOaxmJunilever-campaign-app-web%20(1).png" class="d-block w-100" alt="Best Selling Items">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Best Selling Items</h5>
-                        <p>Check out our most popular products.</p>
                     </div>
                 </div>
                 <!-- Slide 4: Flash Deals -->
                 <div class="carousel-item">
                     <img src="imgs/DySec-CsPb2nJzVLDySec-zVL8tjGvSekist%20web.png" class="d-block w-100" alt="Flash Deals">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Flash Deals</h5>
-                        <p>Limited-time offers just for you!</p>
                     </div>
                 </div>
             </div>
@@ -194,6 +247,7 @@
 <div class="container my-5" id="products">
     <h2 class="mb-4 text-center">Best of FRUIT</h2>
     <div class="row row-cols-1 row-cols-md-5 g-4">
+
         <!-- Product Card -->
         <div class="col">
             <div class="card h-100">
@@ -255,8 +309,88 @@
             </div>
         </div>
     </div>
+    <div class="text-end mt-3">
+        <a href="view-more.jsp" class="text-danger">View more</a>
+    </div>
 </div>
 
+
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Best Of Vegetable</h3>
+
+    <div class="text-end mt-3">
+        <a href="view-more.jsp" class="text-danger">View more</a>
+    </div>
+
+    <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0197_1.jpg" alt="Spine Gourd">
+                <h6>Good Harvest Spine Gourd</h6>
+                <p>300.00 g</p>
+                <p>Rs. 291.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0198_1.jpg" alt="Thalana Batu">
+                <h6>Good Harvest Thalana Batu</h6>
+                <p>350.00 g</p>
+                <p>Rs. 175.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0199_1.jpg" alt="Tomato">
+                <h6>Good Harvest Tomato</h6>
+                <p>500.00 g</p>
+                <p>Rs. 160.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0201_1.jpg" alt="Big Onion">
+                <h6>Big Onion</h6>
+                <p>500.00 g</p>
+                <p>Rs. 150.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0206_1.jpg" alt="Broccoli">
+                <h6>Broccoli</h6>
+                <p>300.00 g</p>
+                <p>Rs. 720.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="product-card">
+                <img src="imgs/VGE0207_1.jpg" alt="Broccoli">
+                <h6>Beans</h6>
+                <p>250.00 g</p>
+                <p>Rs. 178.00</p>
+                <p><small>(Inclusive of all taxes)</small></p>
+                <button class="btn btn-outline-danger">ADD</button>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <footer class="bg-dark text-white py-3">
     <div class="container text-center">
