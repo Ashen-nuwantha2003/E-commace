@@ -6,7 +6,7 @@
     <title>Login - Cargills Online</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body class="bg-light">
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
@@ -15,7 +15,7 @@
             <img src="imgs/cargills%20new.png" alt="Cargills Logo" style="width: 100px; height: auto;">
             <h2 class="h4 mt-3">Login to Your Account</h2>
         </div>
-        <form action="login.jsp" method="POST">
+        <form action="login" method="POST">
             <!-- Email Input -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>

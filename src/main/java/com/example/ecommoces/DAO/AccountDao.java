@@ -64,16 +64,18 @@ public class AccountDao {
 
             pstmt.setString(1, email);
             pstmt.setString(2, password); // In production, use password hashing
+            System.out.println("asdadada: " + email+password);
 
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
                 Account account = new Account();
-                account.setFirstName(rs.getString("firstname"));
-                account.setLastName(rs.getString("lastname"));
+                account.setFirstName(rs.getString("first_name"));
+                account.setLastName(rs.getString("last_name"));
                 account.setEmail(rs.getString("email"));
                 account.setPhone(rs.getString("phone"));
                 account.setPassword(rs.getString("password"));
+                account.setConfirmPassword(rs.getString("confirm_password"));
                 // Don't set the password for security
                 return account;
             }
@@ -93,7 +95,7 @@ public class AccountDao {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                if (rs.getString("username").equals("admin") && rs.getString("password").equals("admin123")){
+                if (rs.getString("email").equals("admin") && rs.getString("password").equals("admin123")){
                     return "admin";
                 }
             }

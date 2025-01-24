@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -25,51 +24,43 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         String rememberMe = request.getParameter("rememberMe");
 
-        // Validate input
-        if (email == null || password == null ||
-                email.trim().isEmpty() || password.trim().isEmpty()) {
-
-            request.setAttribute("error", "Email and password are required");
+        // Input validation
+        if (email == null || password == null || email.trim().isEmpty() || password.trim().isEmpty()) {
+            request.setAttribute("error", "Email and password are required.");
             request.getRequestDispatcher("index.jsp").forward(request, response);
             return;
         }
 
-
-
-
-
         try {
+            // Attempt login
             Account account = accountDAO.login(email, password);
 
             if (account != null) {
                 // Create session
                 HttpSession session = request.getSession();
                 session.setAttribute("email", account.getEmail());
-                session.setAttribute("password", account.getPassword());
 
-                // Handle remember me
+                // Remember me logic
                 if ("on".equals(rememberMe)) {
                     session.setMaxInactiveInterval(7 * 24 * 60 * 60); // 7 days
                 } else {
                     session.setMaxInactiveInterval(30 * 60); // 30 minutes
                 }
 
-                if ("admin".equals(account.getEmail())) {
+                // Admin redirection
+                if ("Admin123@gmail.com".equalsIgnoreCase(account.getEmail())) { // Case-insensitive comparison
                     response.sendRedirect("AdminPanel.jsp");
                 } else {
                     response.sendRedirect("index.jsp");
                 }
-
-                /*response.sendRedirect("index.jsp")*/;
             } else {
-                request.setAttribute("error", "Invalid Email or password");
+                request.setAttribute("error", "Invalid email or password.");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
         } catch (SQLException e) {
-            request.setAttribute("error", "Login failed. Please try again.");
+            e.printStackTrace(); // Log exception for debugging
+            request.setAttribute("error", "Login failed due to a system error.");
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
-
-
 }
