@@ -107,7 +107,7 @@
         <!-- User Options -->
         <div class="d-flex align-items-center">
             <img src="icon/icons8-login-67.png" style="width: 30px;">
-            <a href="Login.jsp" class="text-white me-3">Login/Sign Up</a>
+            <a href="login.jsp" class="text-white me-3">Login/Sign Up</a>
             <img src="icon/icons8-shopping-cart-80.png" style="width: 30px; margin-right: 15px">
             <a href="#"><img src="icon/icons8-google-play-50.png" alt="Google Play" style="width: 30px; margin-right: 10px;"></a>
             <a href="google play.jsp" class="text-white me-3">Google Play</a>

@@ -15,7 +15,7 @@
             <img src="imgs/cargills%20new.png" alt="Cargills Logo" style="width: 100px; height: auto;">
             <h2 class="h4 mt-3">Login to Your Account</h2>
         </div>
-        <form action="authenticate.jsp" method="POST">
+        <form action="login.jsp" method="POST">
             <!-- Email Input -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
