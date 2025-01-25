@@ -6,7 +6,7 @@
     <title>Cargills Online - Sri Lanka's Freshest Grocery Store</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
     <style>
 
         #category>div {
@@ -116,21 +116,25 @@
         </div>
     </div>
     <!-- Categories Navigation -->
-    <div class="bg-light">
-        <div class="container">
-            <nav class="nav">
-                <a class="nav-link text-danger fw-bold" href="#">Shop By Category</a>
-                <a class="nav-link" href="#">Fruits</a>
-                <a class="nav-link" href="#">Vegetables</a>
-                <a class="nav-link" href="#">Meats</a>
-                <a class="nav-link" href="#">Dairy</a>
-                <a class="nav-link" href="#">Beverages</a>
-                <a class="nav-link" href="#">Household</a>
-                <a class="nav-link" href="#">Rice</a>
-                <span class="ms-auto text-muted">Delivery Today: 12:00 PM - 04:00 PM</span>
-            </nav>
+    <form id="ashen" action="item-display" method="get">
+        <div class="bg-light">
+            <div class="container">
+                <nav class="nav">
+                    <a class="nav-link text-danger fw-bold" href="#">Shop By Category</a>
+                    <a class="nav-link" href="Fruits.jsp" onclick="selectCategory('Fruits', event)">Fruits>
+                        </a>
+                    <a class="nav-link" href="#">Vegetables</a>
+                    <a class="nav-link" href="#">Meats</a>
+                    <a class="nav-link" href="#">Dairy</a>
+                    <a class="nav-link" href="#">Beverages</a>
+                    <a class="nav-link" href="#">Household</a>
+                    <a class="nav-link" href="#">Rice</a>
+                    <span class="ms-auto text-muted">Delivery Today: 12:00 PM - 04:00 PM</span>
+                </nav>
+            </div>
         </div>
-    </div>
+    </form>
+
 </header>
 
 
@@ -169,7 +173,7 @@
             <div class="row text-center" id="category">
                 <div class="col-md-2">
                     <div></div>
-                    <a href="category.jsp?category=fruits" class="btn btn-outline-secondary">Fruits</a>
+                    <a href="Fruits.jsp?category=fruits" class="btn btn-outline-secondary">Fruits</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>
@@ -400,5 +404,16 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function selectCategory(categoryName, event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Set the hidden input value
+        document.getElementById('selectedCategory').value = categoryName;
+
+        // Submit the form
+        document.getElementById('categoryForm').submit();
+    }
+</script>
 </body>
 </html>
