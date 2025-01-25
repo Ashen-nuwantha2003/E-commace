@@ -238,20 +238,28 @@
     // Category initialization
     const categories = [
         {
-            id: 'electronic',
-            name: 'Electronic Items',
+            id: 'Fruits',
+            name: 'Fruits',
         },
         {
-            id: 'fashion',
-            name: 'Fashion Items',
+            id: 'Veg',
+            name: 'Vegetable',
         },
         {
-            id: 'beauty',
-            name: 'Beauty Items',
+            id: 'Dairy',
+            name: 'Dairy',
         },
         {
-            id: 'living',
-            name: 'Living Items',
+            id: 'Beverages',
+            name: 'Beverages',
+        },
+        {
+            id: 'Household',
+            name: 'Household',
+        },
+        {
+            id: 'Rice',
+            name: 'Rice',
         }
     ];
 
