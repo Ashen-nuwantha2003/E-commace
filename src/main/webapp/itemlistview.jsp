@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
-<%@ page import="lk.ijse.hasaonlinestore.dto.ItemDTO" %>
+<%@ page import="com.example.ecommoces.DTO.ItemDTO" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Management - Hasa Online Store</title>
+    <title>Item Management - Cragills Online Store</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
     <div class="container">
         <a class="navbar-brand" href="#">
             <i class="bi bi-shop me-2"></i>
-            Hasa Online Store
+            Cargills Online Store
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>

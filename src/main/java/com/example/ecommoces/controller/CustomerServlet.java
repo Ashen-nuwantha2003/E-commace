@@ -36,7 +36,7 @@ public class CustomerServlet extends HttpServlet {
                         rst.getString(6)
                 );
                 customerList.add(customer);
-                System.out.println(customerList+"blaaaaaaaa");
+
             }
 
             req.setAttribute("customers", customerList);
