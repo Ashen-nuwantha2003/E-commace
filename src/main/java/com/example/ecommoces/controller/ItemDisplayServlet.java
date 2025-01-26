@@ -21,14 +21,18 @@ public class ItemDisplayServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String category = request.getParameter("category");
+        String message = request.getParameter("message");
+        System.out.println(message);
         List<ItemDTO> items = new ArrayList<>();
 
         try (Connection connection = dataSource.getConnection()) {
             String sql = "SELECT * FROM item WHERE category = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, category);
+            statement.setString(1,message);
+
 
             ResultSet rs = statement.executeQuery();
+
 
             while (rs.next()) {
                 ItemDTO item = new ItemDTO();
@@ -42,6 +46,7 @@ public class ItemDisplayServlet extends HttpServlet {
                 item.setImagePath(rs.getString("image_path"));
                 items.add(item);
             }
+
 
             request.setAttribute("items", items);
             request.setAttribute("category", category);
