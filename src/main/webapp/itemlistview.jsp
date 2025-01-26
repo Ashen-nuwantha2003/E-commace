@@ -25,7 +25,7 @@
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Item List</h1>
-        <a href="AdminPanel.jsp" class="btn btn-outline-primary">
+        <a href="items" class="btn btn-outline-primary">
             <i class="bi bi-arrow-left me-2"></i>
             Back to Dashboard
         </a>

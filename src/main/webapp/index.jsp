@@ -121,8 +121,7 @@
             <div class="container">
                 <nav class="nav">
                     <a class="nav-link text-danger fw-bold" href="#">Shop By Category</a>
-                    <a class="nav-link" href="Fruits.jsp?message=Fruits">Fruits>
-                        </a>
+                    <a class="nav-link" href="Fruits.jsp?message=Fruits">Fruits</a>
                     <a class="nav-link" href="#">Vegetables</a>
                     <a class="nav-link" href="#">Meats</a>
                     <a class="nav-link" href="#">Dairy</a>
@@ -177,23 +176,23 @@
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="item-display?message=vegetables" class="btn btn-outline-secondary">Vegetables</a>
+                    <a href="item-display?message=Vegetable" class="btn btn-outline-secondary">Vegetables</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="item-display?message=meats" class="btn btn-outline-secondary">Meats</a>
+                    <a href="item-display?message=Meats" class="btn btn-outline-secondary">Meats</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="item-display?messagey=dairy" class="btn btn-outline-secondary">Dairy</a>
+                    <a href="item-display?message=Dairy" class="btn btn-outline-secondary">Dairy</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="item-display?message=pantry" class="btn btn-outline-secondary">Beverages</a>
+                    <a href="item-display?message=Beverages" class="btn btn-outline-secondary">Beverages</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>
-                    <a href="item-display?message=pantry" class="btn btn-outline-secondary">Household</a>
+                    <a href="item-display?message=Household" class="btn btn-outline-secondary">Household</a>
                 </div>
                 <div class="col-md-2">
                     <div></div>

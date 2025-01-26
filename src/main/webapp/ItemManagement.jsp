@@ -246,6 +246,10 @@
             name: 'Vegetable',
         },
         {
+            id: 'Meats',
+            name: 'Meats',
+        },
+        {
             id: 'Dairy',
             name: 'Dairy',
         },
